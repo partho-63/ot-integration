@@ -12,19 +12,26 @@ const {
   addUserValidators,
   addUserValidationHandler,
 } = require("../middlewares/users/userValidators");
+const { checkLogin } = require("../middlewares/common/checkLogin");
 
 const router = express.Router();
 
 // get user list page
-router.get("/", decorateHtmlResponse("Users List"), getUsers);
+router.get("/", decorateHtmlResponse("Users List"), checkLogin, getUsers);
 
 // get user create page
-router.get("/add", decorateHtmlResponse("Add User"), addUser);
+router.get("/add", decorateHtmlResponse("Add User"), checkLogin, addUser);
 
 // post a user
-router.post("/add", addUserValidators, addUserValidationHandler, createUser);
+router.post(
+  "/add",
+  checkLogin,
+  addUserValidators,
+  addUserValidationHandler,
+  createUser
+);
 
 // delete a user
-router.delete("/:id", removeUser);
+router.delete("/:id", checkLogin, removeUser);
 
 module.exports = router;

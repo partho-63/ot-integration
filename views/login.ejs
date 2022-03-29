@@ -6,17 +6,23 @@
         <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
 
         <div class="form-floating">
-          <input type="text" class="form-control" id="username" name="username" placeholder="name@example.com">
-          <label for="username">Email address</label>
-          <p class="error show"></p>
+          <input type="text" class="form-control" id="email" name="email" placeholder="name@example.com" value="<%= data.email %>">
+          <label for="email">Email address</label>
+          <% if(errors.username) { %>
+          <p class="error show"><%= errors.email.msg %></p>
+          <% } %>
         </div>
         <div class="form-floating">
           <input type="password" class="form-control" id="password" name="password" placeholder="Password">
           <label for="password">Password</label>
-          <p class="error show"></p>
+          <% if(errors.password) { %>
+          <p class="error show"><%= errors.password.msg %></p>
+          <% } %>
         </div>
         <div class="form-floating">
-          <p class="error show"></p>
+          <% if(errors.common) { %>
+          <p class="error show"><%= errors.common.msg %></p>
+          <% } %>
         </div>
         <!-- <div class="checkbox mb-3">
           <label>
