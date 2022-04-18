@@ -1,0 +1,84 @@
+<%- include('../partials/header.ejs'); %>
+
+<%- include('../partials/navbar.ejs'); %>
+
+<%- include('../partials/sidebar.ejs'); %>
+  
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                <div class="justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                    <div class="row">
+                        <div class="col-3">
+                            <h1 class="h2"><%= workspace.name %></h1>
+                        </div>
+                        <div class="col-9 text-end">
+                            <% if(trelloBoards.length === 0) { %>
+                                <a class="btn btn-info" href="#" id="importBoardButton">Import Boards</a>
+                            <% } %>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion" id="boardList">
+                    <% trelloBoards.forEach(function(board) { %>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#<%= board._id %>" aria-expanded="false" aria-controls="<%= board._id %>">
+                            <%= board.name %>
+                        </button>
+                      </h2>
+                      <div id="<%= board._id %>" class="accordion-collapse collapse" data-bs-parent="#boardList">
+                        <div class="accordion-body">
+                          
+                        </div>
+                      </div>
+                    </div>
+                    <% }); %>
+                </div>
+
+            </main>
+        </div>
+    </div>
+
+    <script>
+
+        let importBoardButton = document.querySelector("#importBoardButton");
+        const trelloToken = `<%= trelloToken %>`;
+        const trelloWorkspaceId = `<%= workspace.workspaceId %>`;
+        const trelloApiKey = `<%= trelloApiKey %>`;
+        const url = `https://api.trello.com/1/organizations/${trelloWorkspaceId}/boards?key=${trelloApiKey}&token=${trelloToken}`;
+        
+        importBoardButton.onclick = async function() {
+            let response = await fetch(url, { mothod: 'GET' });
+
+            let result = await response.json();
+
+            let successResults = 0;
+
+            result.forEach(element => {
+                
+                const elementData = JSON.stringify({
+                    ...element,
+                    workspaceId: trelloWorkspaceId
+                });
+
+                let saveResult = fetch("/trello/boards", {
+                    method: "POST",
+                    headers: {'Content-Type': 'application/json'},
+                    body: elementData
+                });
+
+                if(saveResult === true) {
+                    successResults++;
+                }
+            });
+
+            if(successResults === result.length) {
+                location.reload();
+            }
+
+        };
+
+    </script>
+
+</body>
+</html>

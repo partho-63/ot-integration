@@ -26,6 +26,10 @@ const userSchema = mongoose.Schema(
       enum: ["admin", "user"],
       default: "user",
     },
+    trello: {
+      type: mongoose.Types.ObjectId,
+      ref: "Trello",
+    },
   },
   {
     timestamps: true,

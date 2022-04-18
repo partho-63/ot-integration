@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trello</title>
+</head>
+<body>
+    
+    <p id="loggedInUserEmail" style="visibility: hidden;"><%= loggedInUser.email %></p>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"crossorigin="anonymous"></script>
+    <script src="https://api.trello.com/1/client.js?key=<%= trelloApiKey %>"></script>
+
+    <script>
+        let trelloToken;
+        const loggedInUserEmail = document.querySelector("#loggedInUserEmail").innerHTML;
+
+        let membershipIdSuccess = function(data) {
+
+            const memberId = data.id;
+            
+            const trelloData = JSON.stringify({
+                trelloToken: trelloToken,
+                userEmail: loggedInUserEmail,
+                memberId: memberId,
+                error: false
+            });
+                
+            fetch("/trello/authorize", {
+                method: "POST",
+                headers: {'Content-Type': 'application/json'},
+                body: trelloData
+            });
+        };
+
+        let membershipIdError = function(err) {
+            console.log(err);
+        };
+
+        window.Trello.authorize({
+            // type: 'popup',
+            name: 'Getting Started Application',
+            scope: {
+                read: 'true',
+                write: 'true'
+            },
+            expiration: 'never',
+            success: function() {
+
+                trelloToken = Trello.token();
+
+                let response = window.Trello.rest('GET', `tokens/${trelloToken}/member`, {}, membershipIdSuccess, membershipIdError);
+
+            },
+            error: function() {
+                fetch("/trello/authorize", {
+                    method: "POST",
+                    body: {
+                        error: true
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

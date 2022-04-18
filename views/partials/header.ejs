@@ -40,14 +40,15 @@
   </head>
   <body>
 
+    
     <script>
-
-      function logout() {
-        fetch("/", { method: "DELETE" });
-        setTimeout(() => {
-          window.location.replace("/");
-        }, 1000);
-      }
+          
+          function logout() {
+            fetch("/", { method: "DELETE" });
+            setTimeout(() => {
+              window.location.replace("/");
+            }, 1000);
+          };
 
     </script>
 
