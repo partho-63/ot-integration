@@ -20,16 +20,10 @@ const router = express.Router();
 router.get("/", decorateHtmlResponse("Users List"), checkLogin, getUsers);
 
 // get user create page
-router.get("/add", decorateHtmlResponse("Add User"), checkLogin, addUser);
+router.get("/add", decorateHtmlResponse("Add User"), addUser);
 
 // post a user
-router.post(
-  "/add",
-  checkLogin,
-  addUserValidators,
-  addUserValidationHandler,
-  createUser
-);
+router.post("/add", addUserValidators, addUserValidationHandler, createUser);
 
 // delete a user
 router.delete("/:id", checkLogin, removeUser);

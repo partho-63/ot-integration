@@ -79,6 +79,7 @@
 
                 if(result.errors) {
                     Object.keys(result.errors).forEach((fieldName) => {
+                        console.log(fieldName);
                         form[fieldName].classList.add("is-invalid");
                     });
                     const errorPlaceholder = document.querySelector(`.${fieldName}-error`);
