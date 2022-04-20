@@ -14,11 +14,13 @@ const importTrelloCards = async function (req, res, next) {
         const trelloToken = res.locals.trelloToken;
         const trelloListId = list.listId;
 
+        // url for getting cards of list
         const url = `https://api.trello.com/1/lists/${trelloListId}/cards?key=${trelloApiKey}&token=${trelloToken}`;
         const response = await fetch(url);
         const result = await response.json();
 
         for await (const card of result) {
+          // save new cards
           let newCard = new TrelloCard({
             cardId: card.id,
             name: card.name,
@@ -27,6 +29,7 @@ const importTrelloCards = async function (req, res, next) {
 
           const savedCard = await newCard.save();
 
+          // add card id to list
           const listUpdateResult = await TrelloList.updateOne(
             {
               _id: list._id,

@@ -1,0 +1,112 @@
+[
+  {
+    "TrelloBoard": {
+      "id": "621f48e20c70e41d333ebada",
+      "name": "AZIM_ERP",
+      "desc": "",
+      "descData": null,
+      "closed": false,
+      "dateClosed": null,
+      "idOrganization": "621c9b0a6de71663f077d395",
+      "idEnterprise": null,
+      "limits": null,
+      "pinned": false,
+      "starred": false,
+      "url": "https://trello.com/b/SJMLp7lv/azimerp",
+      "prefs": {
+        "permissionLevel": "org",
+        "hideVotes": false,
+        "voting": "disabled",
+        "comments": "members",
+        "invitations": "members",
+        "selfJoin": true,
+        "cardCovers": true,
+        "isTemplate": false,
+        "cardAging": "regular",
+        "calendarFeedEnabled": false,
+        "hiddenPluginBoardButtons": [],
+        "background": "blue",
+        "backgroundColor": "#0079BF",
+        "backgroundImage": null,
+        "backgroundImageScaled": null,
+        "backgroundTile": false,
+        "backgroundBrightness": "dark",
+        "backgroundBottomColor": "#0079BF",
+        "backgroundTopColor": "#0079BF",
+        "canBePublic": true,
+        "canBeEnterprise": true,
+        "canBeOrg": true,
+        "canBePrivate": true,
+        "canInvite": true
+      },
+      "shortLink": "SJMLp7lv",
+      "subscribed": false,
+      "labelNames": {
+        "green": "",
+        "yellow": "",
+        "orange": "",
+        "red": "",
+        "purple": "",
+        "blue": "",
+        "sky": "",
+        "lime": "",
+        "pink": "",
+        "black": ""
+      },
+      "powerUps": [],
+      "dateLastActivity": "2022-03-06T06:13:12.266Z",
+      "dateLastView": "2022-04-02T11:32:54.652Z",
+      "shortUrl": "https://trello.com/b/SJMLp7lv",
+      "idTags": [],
+      "datePluginDisable": null,
+      "creationMethod": null,
+      "ixUpdate": null,
+      "templateGallery": null,
+      "enterpriseOwned": false,
+      "idBoardSource": null,
+      "premiumFeatures": [
+        "additionalBoardBackgrounds",
+        "additionalStickers",
+        "customBoardBackgrounds",
+        "customEmoji",
+        "customStickers",
+        "plugins"
+      ],
+      "idMemberCreator": "5923c455de8422c03b298da5",
+      "memberships": [
+        {
+          "idMember": "5923c455de8422c03b298da5",
+          "memberType": "admin",
+          "unconfirmed": false,
+          "deactivated": false,
+          "id": "621f48e20c70e41d333ebadc"
+        },
+        {
+          "idMember": "5590d9af0fbd86334d5c8623",
+          "memberType": "normal",
+          "unconfirmed": false,
+          "deactivated": false,
+          "id": "62244ecb6558b98fea0e9b81"
+        }
+      ]
+    }
+  },
+  {
+    "OneThreadProject": {
+      "_id": "varchar [pk]",
+      "name": "varchar [not null]",
+      "deadline": "date",
+      "color": "varchar",
+      "status": "varchar",
+      "concernedAdmin": "account",
+      "optionalRole": "varchar",
+      "createdBy": "account",
+      "department": "department",
+      "file": "file",
+      "room": "room",
+      "company": "company",
+      "associate": "associate",
+      "isArchived": "boolean"
+    }
+  }
+]

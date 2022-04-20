@@ -14,11 +14,13 @@ const importTrelloLists = async function (req, res, next) {
         const trelloToken = res.locals.trelloToken;
         const trelloBoardId = board.boardId;
 
+        // url for getting lists of boards
         const url = `https://api.trello.com/1/boards/${trelloBoardId}/lists?key=${trelloApiKey}&token=${trelloToken}`;
         const response = await fetch(url);
         const result = await response.json();
 
         for await (const list of result) {
+          // save new lists
           let newList = new TrelloList({
             listId: list.id,
             name: list.name,
@@ -27,6 +29,7 @@ const importTrelloLists = async function (req, res, next) {
 
           const savedList = await newList.save();
 
+          // add list id to board
           const boardUpdateResult = await TrelloBoard.updateOne(
             {
               _id: board._id,

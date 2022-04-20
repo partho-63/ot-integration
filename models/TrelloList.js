@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 
+// Trello List -> OneThread Status
 const trelloListSchema = mongoose.Schema(
   {
     listId: {

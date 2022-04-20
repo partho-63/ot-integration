@@ -34,10 +34,10 @@ router.get(
   renderTrelloHomePage
 );
 
-// authorize Trello account
+// get authorize Trello page
 router.get("/authorize", decorateHtmlResponse(""), authorizeTrelloAccount);
 
-// authorize Trello account
+// authorize Trello account and save trello token
 router.post(
   "/authorize",
   decorateHtmlResponse(""),

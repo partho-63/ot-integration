@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 
+// Trello Card -> OneThread Task
 const trelloCardSchema = mongoose.Schema(
   {
     cardId: {

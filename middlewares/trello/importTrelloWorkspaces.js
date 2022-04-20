@@ -11,6 +11,7 @@ const importTrelloWorkspaces = async function (req, res, next) {
     const trelloToken = res.locals.trelloToken;
     const trelloMemberId = res.locals.trelloMemberId;
 
+    // url for getting workspaces of member
     const url = `https://api.trello.com/1/members/${trelloMemberId}/organizations?key=${trelloApiKey}&token=${trelloToken}`;
 
     const response = await fetch(url);
@@ -24,15 +25,37 @@ const importTrelloWorkspaces = async function (req, res, next) {
       user: user._id,
     });
 
+    const currentDate = new Date();
+
     for await (const workspace of result) {
+      // save new workspaces
       let newWorkspace = new TrelloWorkspace({
-        workspaceId: workspace.id,
+        createdBy: workspace.idMemberCreator,
         name: workspace.displayName,
+        uniqueName: workspace.name,
+        logo: workspace.logoUrl,
+        type: workspace.teamType,
+        about: workspace.desc,
+        websites: workspace.website,
+        registrationYear: currentDate.getFullYear(),
+        totalEmployees: workspace.memberships.length,
+        workspaceId: workspace.id,
         trello: existingTrello._id,
+        // coverImage,
+        // optionalRole,
+        // email,
+        // location,
+        // officeSize,
+        // parentCompanies,
+        // isRemoved,
+        // legalOwnerName,
+        // legalOwnerEmail,
+        // departments,
       });
 
       const savedWorkspace = await newWorkspace.save();
 
+      // add workspace id to trello
       const trelloUpdateResult = await Trello.updateOne(
         {
           _id: existingTrello._id,

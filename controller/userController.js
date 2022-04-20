@@ -1,6 +1,7 @@
 const bcrypt = require("bcrypt");
 const User = require("../models/User");
 
+// get all users
 async function getUsers(req, res, next) {
   try {
     const users = await User.find();
@@ -12,6 +13,7 @@ async function getUsers(req, res, next) {
   }
 }
 
+// render add user page
 async function addUser(req, res, next) {
   try {
     res.render("addUser");
@@ -20,6 +22,7 @@ async function addUser(req, res, next) {
   }
 }
 
+// create user
 async function createUser(req, res, next) {
   let newUser;
   const hashedPassword = await bcrypt.hash(req.body.password, 10);
@@ -43,6 +46,7 @@ async function createUser(req, res, next) {
   }
 }
 
+// remove user
 async function removeUser(req, res, next) {
   try {
     const user = await User.findByIdAndDelete({

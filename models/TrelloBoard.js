@@ -1,11 +1,8 @@
 const mongoose = require("mongoose");
 
+// Trello Board -> OneThread Project
 const trelloBoardSchema = mongoose.Schema(
   {
-    boardId: {
-      type: String,
-      required: true,
-    },
     name: {
       type: String,
       required: true,
@@ -19,6 +16,10 @@ const trelloBoardSchema = mongoose.Schema(
         ref: "TrelloList",
       },
     ],
+    boardId: {
+      type: String,
+      required: true,
+    },
     workspace: {
       type: mongoose.Types.ObjectId,
       ref: "TrelloWorkspace",

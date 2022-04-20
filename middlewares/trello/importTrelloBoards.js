@@ -14,11 +14,13 @@ const importTrelloBoards = async function (req, res, next) {
         const trelloToken = res.locals.trelloToken;
         const trelloWorkspaceId = workspace.workspaceId;
 
+        // url for getting boards of workspace
         const url = `https://api.trello.com/1/organizations/${trelloWorkspaceId}/boards?key=${trelloApiKey}&token=${trelloToken}`;
         const response = await fetch(url);
         const result = await response.json();
 
         for await (const board of result) {
+          // save new boards
           let newBoard = new TrelloBoard({
             boardId: board.id,
             name: board.name,
@@ -28,6 +30,7 @@ const importTrelloBoards = async function (req, res, next) {
 
           const savedBoard = await newBoard.save();
 
+          // add board id to workspace
           const workspaceUpdateResult = await TrelloWorkspace.updateOne(
             {
               _id: workspace._id,

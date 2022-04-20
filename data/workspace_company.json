@@ -1,0 +1,119 @@
+[
+  {
+    "TrelloWorkspace": {
+      "id": "621c9b0a6de71663f077d395",
+      "name": "testone116",
+      "credits": [],
+      "creationMethod": null,
+      "displayName": "Test One",
+      "desc": "",
+      "descData": {
+        "emoji": {}
+      },
+      "domain": null,
+      "idBoards": [
+        "621c9b7e2ff7f8738d95dd7f",
+        "621f48e20c70e41d333ebada",
+        "621f4a8dd187e077513ddd39"
+      ],
+      "idEnterprise": null,
+      "idMemberCreator": "5923c455de8422c03b298da5",
+      "invited": false,
+      "invitations": [],
+      "limits": {
+        "orgs": {
+          "totalMembersPerOrg": {
+            "status": "ok",
+            "disableAt": 4000,
+            "warnAt": 3200
+          },
+          "freeBoardsPerOrg": {
+            "status": "warn",
+            "disableAt": 10,
+            "warnAt": 3,
+            "count": 3
+          }
+        }
+      },
+      "memberships": [
+        {
+          "idMember": "5923c455de8422c03b298da5",
+          "memberType": "admin",
+          "unconfirmed": false,
+          "deactivated": false,
+          "id": "621c9b0a6de71663f077d397"
+        }
+      ],
+      "prefs": {
+        "permissionLevel": "private",
+        "orgInviteRestrict": [],
+        "boardInviteRestrict": "any",
+        "externalMembersDisabled": false,
+        "associatedDomain": null,
+        "googleAppsVersion": 1,
+        "boardVisibilityRestrict": {
+          "private": "org",
+          "org": "org",
+          "enterprise": "org",
+          "public": "org"
+        },
+        "boardDeleteRestrict": {
+          "private": "org",
+          "org": "org",
+          "enterprise": "org",
+          "public": "org"
+        },
+        "attachmentRestrictions": null
+      },
+      "powerUps": [],
+      "products": [],
+      "pendingProduct": null,
+      "billableMemberCount": 1,
+      "activeBillableMemberCount": 1,
+      "billableCollaboratorCount": 0,
+      "url": "https://trello.com/testone116",
+      "website": null,
+      "logoHash": null,
+      "logoUrl": null,
+      "premiumFeatures": [
+        "additionalBoardBackgrounds",
+        "additionalStickers",
+        "customBoardBackgrounds",
+        "customEmoji",
+        "customStickers",
+        "plugins"
+      ],
+      "promotions": [],
+      "enterpriseJoinRequest": {},
+      "standardVariation": null,
+      "availableLicenseCount": null,
+      "maximumLicenseCount": null,
+      "ixUpdate": "6",
+      "teamType": "engineering-it"
+    }
+  },
+  {
+    "OneThreadCompany": {
+      "_id": "varchar [pk]",
+      "createdBy": "account",
+      "name": "varchar [not null, unique]",
+      "uniqueName": "varchar [not null, unique]",
+      "logo": "varchar",
+      "coverImage": "varchar",
+      "type": "varchar",
+      "optionalRole": "varchar",
+      "about": "varchar",
+      "email": "varchar",
+      "legalOwnerName": "varchar",
+      "legalOwnerEmail": "varchar",
+      "location": "varchar",
+      "websites": "varchar",
+      "departments": "department",
+      "registrationYear": "int",
+      "totalEmployees": "varchar",
+      "officeSize": "varchar",
+      "parentCompanies": "varchar",
+      "isRemoved": "boolean"
+    }
+  }
+]

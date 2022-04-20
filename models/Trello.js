@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 
+// model for saving Trello Token and ID for a member
 const trelloSchema = mongoose.Schema(
   {
     token: {
