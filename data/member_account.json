@@ -1,0 +1,133 @@
+[
+  {
+    "TrelloMember": {
+      "id": "5923c455de8422c03b298da5",
+      "aaId": "557058:0d58ab48-0e3d-4b74-8da6-77166e9aae7e",
+      "activityBlocked": false,
+      "avatarHash": "efb2db87a2e384003a8b37b4f244f2ca",
+      "avatarUrl": "https://trello-members.s3.amazonaws.com/5923c455de8422c03b298da5/efb2db87a2e384003a8b37b4f244f2ca",
+      "bio": "",
+      "bioData": {
+        "emoji": {}
+      },
+      "confirmed": true,
+      "fullName": "parthodas63",
+      "idEnterprise": null,
+      "idEnterprisesDeactivated": [],
+      "idMemberReferrer": null,
+      "idPremOrgsAdmin": [],
+      "initials": "P",
+      "memberType": "normal",
+      "nonPublic": {},
+      "nonPublicAvailable": true,
+      "products": [],
+      "url": "https://trello.com/parthodas63",
+      "username": "parthodas63",
+      "status": "disconnected",
+      "aaBlockSyncUntil": null,
+      "aaEmail": null,
+      "aaEnrolledDate": null,
+      "avatarSource": "atlassianAccount",
+      "credentialsRemovedCount": 0,
+      "domainClaimed": null,
+      "email": null,
+      "goldSunsetFreeTrialIdOrganization": null,
+      "gravatarHash": "6cae7061434cd5a32191cea5b9500272",
+      "idBoards": [
+        "5923c455de8422c03b298da7",
+        "621c9b7e2ff7f8738d95dd7f",
+        "621f48e20c70e41d333ebada",
+        "621f4a8dd187e077513ddd39"
+      ],
+      "idOrganizations": [
+        "60d4ef40ef82514814be0354",
+        "621c9b0a6de71663f077d395"
+      ],
+      "idEnterprisesAdmin": [],
+      "limits": {
+        "boards": {
+          "totalPerMember": {
+            "status": "ok",
+            "disableAt": 4500,
+            "warnAt": 3600
+          }
+        },
+        "orgs": {
+          "totalPerMember": {
+            "status": "ok",
+            "disableAt": 850,
+            "warnAt": 680
+          }
+        }
+      },
+      "loginTypes": null,
+      "marketingOptIn": {
+        "optedIn": true,
+        "date": "2022-02-28T09:07:05.263Z"
+      },
+      "messagesDismissed": [
+        {
+          "_id": "62205816f8f87c858e771c87",
+          "name": "ad-logged-in-public-board-571d055e70abc048f1cb5ad7",
+          "count": 1,
+          "lastDismissed": "2022-03-03T05:54:30.558Z"
+        }
+      ],
+      "oneTimeMessagesDismissed": [
+        "inactive-migration-onboarding-required",
+        "teamify-post-migration",
+        "close-menu-of-first-board",
+        "views-switcher-callout",
+        "timeline-views-switcher-new-pill",
+        "calendar-view-views-switcher-new-pill",
+        "dashboard-views-switcher-new-pill",
+        "621c9b0a6de71663f077d395-memberHomeScreenPromptFull"
+      ],
+      "prefs": {
+        "privacy": {
+          "fullName": "public",
+          "avatar": "public"
+        },
+        "sendSummaries": true,
+        "minutesBetweenSummaries": 1,
+        "minutesBeforeDeadlineToNotify": 1440,
+        "colorBlind": false,
+        "locale": "en-US"
+      },
+      "trophies": [],
+      "uploadedAvatarHash": "4553b3139cf1674ef7d282f42d18f0aa",
+      "uploadedAvatarUrl": "https://trello-members.s3.amazonaws.com/5923c455de8422c03b298da5/4553b3139cf1674ef7d282f42d18f0aa",
+      "premiumFeatures": [
+        "additionalBoardBackgrounds",
+        "additionalStickers",
+        "customBoardBackgrounds",
+        "customEmoji",
+        "customStickers",
+        "plugins"
+      ],
+      "isAaMastered": true,
+      "ixUpdate": "70"
+    }
+  },
+  {
+    "OneThreadAccount": {
+      "_id": "varchar [pk]",
+      "name": "varchar [unique]",
+      "firstName": "varchar",
+      "lastName": "varchar",
+      "email": "varchar [not null, unique]",
+      "secondaryEmail": "varchar",
+      "contactNo": "varchar [not null]",
+      "gender": "varchar",
+      "bloodGroup": "varchar",
+      "location": "varchar",
+      "about": "varchar",
+      "birthDate": "date",
+      "profileImage": "varchar",
+      "salt": "varchar",
+      "password": "varchar",
+      "isVerified": "boolean",
+      "language": "varchar"
+    }
+  }
+]

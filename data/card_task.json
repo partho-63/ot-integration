@@ -1,0 +1,98 @@
+[
+  {
+    "TrelloCard": {
+      "id": "62244f2eaab26247a0a045c8",
+      "badges": {
+        "attachmentsByType": {
+          "trello": {
+            "board": 0,
+            "card": 0
+          }
+        },
+        "location": false,
+        "votes": 0,
+        "viewingMemberVoted": false,
+        "subscribed": false,
+        "fogbugz": "",
+        "checkItems": 0,
+        "checkItemsChecked": 0,
+        "checkItemsEarliestDue": null,
+        "comments": 0,
+        "attachments": 0,
+        "description": false,
+        "due": null,
+        "dueComplete": false,
+        "start": null
+      },
+      "checkItemStates": null,
+      "closed": false,
+      "dueComplete": false,
+      "dateLastActivity": "2022-03-06T06:05:34.768Z",
+      "desc": "",
+      "descData": {
+        "emoji": {}
+      },
+      "due": null,
+      "dueReminder": null,
+      "email": null,
+      "idBoard": "621f48e20c70e41d333ebada",
+      "idChecklists": [],
+      "idList": "62244f16207cdc7edaf0d533",
+      "idMembers": [],
+      "idMembersVoted": [],
+      "idShort": 1,
+      "idAttachmentCover": null,
+      "labels": [],
+      "idLabels": [],
+      "manualCoverAttachment": false,
+      "name": "Dual Currency",
+      "pos": 65535,
+      "shortLink": "MP1GDWCt",
+      "shortUrl": "https://trello.com/c/MP1GDWCt",
+      "start": null,
+      "subscribed": false,
+      "url": "https://trello.com/c/MP1GDWCt/1-dual-currency",
+      "cover": {
+        "idAttachment": null,
+        "color": null,
+        "idUploadedBackground": null,
+        "size": "normal",
+        "brightness": "dark",
+        "idPlugin": null
+      },
+      "isTemplate": false,
+      "cardRole": null
+    }
+  },
+  {
+    "OneThreadTask": {
+      "_id": "varchar [pk]",
+      "name": "varchar [not null, unique]",
+      "description": "varchar",
+      "status": "taskStatus",
+      "account": "account",
+      "priority": "varchar",
+      "dueDate": "date",
+      "file": "file",
+      "timeSpent": "number",
+      "project": "project",
+      "company": "company",
+      "isCompleted": "boolean",
+      "completedAt": "date",
+      "completedBy": "account",
+      "parentTask": "task",
+      "storyPoint": "number",
+      "reminderTime": "date [note: 'in date']",
+      "preReminderTime": "number [note: 'in miliseconds']",
+      "repetitionType": "string [note: 'Does not repeat, Repeat daily, Custom repetition']",
+      "repetitionTimes": "number",
+      "repetitionInterval": "string [note: 'Days, Weeks, Months']",
+      "selectedDay": "string [note: 'sun, mon, tue, ....']",
+      "dayOfMonth": "number",
+      "endType": "string [note: 'never, on, after']",
+      "endsAt": "date",
+      "endsAfterOccurrences": "number",
+      "repeatedParentTask": "task"
+    }
+  }
+]
