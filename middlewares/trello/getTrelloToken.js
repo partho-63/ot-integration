@@ -1,9 +1,9 @@
 const User = require("../../models/User");
-const Trello = require("../../models/Trello");
-const TrelloWorkspace = require("../../models/TrelloWorkspace");
-const TrelloBoard = require("../../models/TrelloBoard");
-const TrelloList = require("../../models/TrelloList");
-const TrelloCard = require("../../models/TrelloCard");
+const Trello = require("../../models/trello/Trello");
+const TrelloWorkspace = require("../../models/trello/TrelloWorkspace");
+const TrelloBoard = require("../../models/trello/TrelloBoard");
+const TrelloList = require("../../models/trello/TrelloList");
+const TrelloCard = require("../../models/trello/TrelloCard");
 
 // get trello token of logged in user
 const getTrelloToken = async function (req, res, next) {

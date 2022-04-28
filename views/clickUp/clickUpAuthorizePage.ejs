@@ -1,0 +1,54 @@
+<%- include('../partials/header.ejs'); %>
+
+<%- include('../partials/navbar.ejs'); %>
+
+<%- include('../partials/sidebar.ejs'); %>
+  
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                <div class="justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                    <div class="row">
+                        <div class="col-3">
+                            <h1 class="h2">ClickUp</h1>
+                            <p id="loggedInUserEmail" style="visibility: hidden;"><%= loggedInUser.email %></p>
+                        </div>
+                        <div class="col-9 text-end">
+                            <% if(code === "") { %>
+                                <a class="btn btn-success" href="https://app.clickup.com/api?client_id=<%= clientId %>&redirect_uri=http://localhost:5000/clickUp/authorize">Authorize ClickUp Account</a>
+                            <% } else { %>
+                                <a class="btn btn-info" href="#" id="getAccessTokenButton">Get Access Token</a>
+                            <% } %>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script>
+        
+        const clientId = `<%= clientId %>`;
+        const clientSecret = `<%= clientSecret %>`;
+        const code = `<%= code %>`;
+
+        let getAccessTokenButton = document.querySelector('#getAccessTokenButton');
+
+        getAccessTokenButton.onclick = async function() {
+
+            const clickUpData = JSON.stringify({
+                clientId: clientId,
+                clientSecret: clientSecret,
+                code: code
+            });
+
+            let saveAccessToken = fetch("/clickUp/accessToken", {
+                method: "POST",
+                headers: {'Content-Type': 'application/json'},
+                body: clickUpData
+            });
+
+        }
+        
+    </script>
+
+</body>
+</html>

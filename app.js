@@ -12,6 +12,7 @@ const {
 const loginRouter = require("./router/loginRouter");
 const usersRouter = require("./router/usersRouter");
 const trelloRouter = require("./router/trelloRouter");
+const clickUpRouter = require("./router/clickUpRouter");
 
 const app = express();
 
@@ -43,6 +44,7 @@ app.use(cookieParser(process.env.COOKIE_SECRET));
 app.use("/", loginRouter);
 app.use("/users", usersRouter);
 app.use("/trello", trelloRouter);
+app.use("/clickup", clickUpRouter);
 
 // error handling
 app.use(notFoundHandler);

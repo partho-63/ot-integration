@@ -1,7 +1,7 @@
 const fetch = require("node-fetch");
 const User = require("../../models/User");
-const Trello = require("../../models/Trello");
-const TrelloWorkspace = require("../../models/TrelloWorkspace");
+const Trello = require("../../models/trello/Trello");
+const TrelloWorkspace = require("../../models/trello/TrelloWorkspace");
 
 const importTrelloWorkspaces = async function (req, res, next) {
   try {

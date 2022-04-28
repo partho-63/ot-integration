@@ -1,6 +1,6 @@
 const fetch = require("node-fetch");
-const TrelloBoard = require("../../models/TrelloBoard");
-const TrelloList = require("../../models/TrelloList");
+const TrelloBoard = require("../../models/trello/TrelloBoard");
+const TrelloList = require("../../models/trello/TrelloList");
 
 const importTrelloLists = async function (req, res, next) {
   try {

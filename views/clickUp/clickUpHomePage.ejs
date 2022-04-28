@@ -1,0 +1,30 @@
+<%- include('../partials/header.ejs'); %>
+
+<%- include('../partials/navbar.ejs'); %>
+
+<%- include('../partials/sidebar.ejs'); %>
+  
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                <div class="justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                    <div class="row">
+                        <div class="col-3">
+                            <h1 class="h2">ClickUp</h1>
+                        </div>
+                        <div class="col-9 text-end">
+                            <% if(accessToken === "") { %>
+                                <a class="btn btn-success" href="/clickUp/authorize">Add ClickUp Account</a>
+                            <% } else { %>
+                                <a class="btn btn-info" href="/clickUp/import">Import</a>
+                            <% } %>
+                        </div>
+                    </div>
+                </div>
+
+                
+
+            </main>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,7 +1,7 @@
 const jwt = require("jsonwebtoken");
 const createError = require("http-errors");
 const User = require("../models/User");
-const Trello = require("../models/Trello");
+const Trello = require("../models/trello/Trello");
 
 // render trello home page
 async function renderTrelloHomePage(req, res, next) {
@@ -24,7 +24,7 @@ function authorizeTrelloAccount(req, res, next) {
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
     req.user = decoded;
 
-    // set locals TRELLO_API and loggend in user
+    // set locals TRELLO_API_KEY and loggend in user
     res.render("trello/trelloAuthorizePage", {
       trelloApiKey: process.env.TRELLO_API_KEY,
       loggedInUser: decoded,
