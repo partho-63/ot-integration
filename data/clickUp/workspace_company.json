@@ -1,0 +1,74 @@
+[
+  {
+    "ClickUpWorkspace": {
+      "id": "31073722",
+      "name": "OT_Intgrtn",
+      "color": "#07a092",
+      "avatar": null,
+      "members": [
+        {
+          "user": {
+            "id": 48921484,
+            "username": "Partho Das",
+            "email": "partho.das@azimandson.com",
+            "color": "#1b5e20",
+            "profilePicture": null,
+            "initials": "PD",
+            "role": 3,
+            "custom_role": null,
+            "last_active": "1650969934720",
+            "date_joined": "1650955740810",
+            "date_invited": "1650953874369"
+          },
+          "invited_by": {
+            "id": 48289966,
+            "username": "Partho Das",
+            "color": "#304ffe",
+            "email": "parthodas63@gmail.com",
+            "initials": "PD",
+            "profilePicture": null
+          }
+        },
+        {
+          "user": {
+            "id": 48289966,
+            "username": "Partho Das",
+            "email": "parthodas63@gmail.com",
+            "color": "#304ffe",
+            "profilePicture": null,
+            "initials": "PD",
+            "role": 1,
+            "custom_role": null,
+            "last_active": "1651131540517",
+            "date_joined": "1650953874369",
+            "date_invited": "1650953874369"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "OneThreadCompany": {
+      "_id": "varchar [pk]",
+      "createdBy": "account",
+      "name": "varchar [not null, unique]",
+      "uniqueName": "varchar [not null, unique]",
+      "logo": "varchar",
+      "coverImage": "varchar",
+      "type": "varchar",
+      "optionalRole": "varchar",
+      "about": "varchar",
+      "email": "varchar",
+      "legalOwnerName": "varchar",
+      "legalOwnerEmail": "varchar",
+      "location": "varchar",
+      "websites": "varchar",
+      "departments": "department",
+      "registrationYear": "int",
+      "totalEmployees": "varchar",
+      "officeSize": "varchar",
+      "parentCompanies": "varchar",
+      "isRemoved": "boolean"
+    }
+  }
+]

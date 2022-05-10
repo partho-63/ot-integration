@@ -1,0 +1,105 @@
+[
+  {
+    "ClickUpTask": {
+      "id": "2fk7zzw",
+      "custom_id": null,
+      "name": "Get Members",
+      "text_content": null,
+      "description": null,
+      "status": {
+        "status": "r&d",
+        "color": "#d3d3d3",
+        "type": "open",
+        "orderindex": 0
+      },
+      "orderindex": "8.00000000000000000000000000000000",
+      "date_created": "1650956313642",
+      "date_updated": "1650957743162",
+      "date_closed": null,
+      "archived": false,
+      "creator": {
+        "id": 48289966,
+        "username": "Partho Das",
+        "color": "#304ffe",
+        "email": "parthodas63@gmail.com",
+        "profilePicture": null
+      },
+      "assignees": [
+        {
+          "id": 48921484,
+          "username": "Partho Das",
+          "color": "#1b5e20",
+          "initials": "PD",
+          "email": "partho.das@azimandson.com",
+          "profilePicture": null
+        }
+      ],
+      "watchers": [],
+      "checklists": [],
+      "tags": [],
+      "parent": null,
+      "priority": null,
+      "due_date": "1651269600000",
+      "start_date": null,
+      "points": null,
+      "time_estimate": null,
+      "custom_fields": [],
+      "dependencies": [],
+      "linked_tasks": [],
+      "team_id": "31073722",
+      "url": "https://app.clickup.com/t/2fk7zzw",
+      "permission_level": "create",
+      "list": {
+        "id": "187068339",
+        "name": "PD_Tasks",
+        "access": true
+      },
+      "project": {
+        "id": "109046744",
+        "name": "PD_Task_Lists",
+        "hidden": false,
+        "access": true
+      },
+      "folder": {
+        "id": "109046744",
+        "name": "PD_Task_Lists",
+        "hidden": false,
+        "access": true
+      },
+      "space": {
+        "id": "54988780"
+      }
+    }
+  },
+  {
+    "OneThreadTask": {
+      "_id": "varchar [pk]",
+      "name": "varchar [not null, unique]",
+      "description": "varchar",
+      "status": "taskStatus",
+      "account": "account",
+      "priority": "varchar",
+      "dueDate": "date",
+      "file": "file",
+      "timeSpent": "number",
+      "project": "project",
+      "company": "company",
+      "isCompleted": "boolean",
+      "completedAt": "date",
+      "completedBy": "account",
+      "parentTask": "task",
+      "storyPoint": "number",
+      "reminderTime": "date [note: 'in date']",
+      "preReminderTime": "number [note: 'in miliseconds']",
+      "repetitionType": "string [note: 'Does not repeat, Repeat daily, Custom repetition']",
+      "repetitionTimes": "number",
+      "repetitionInterval": "string [note: 'Days, Weeks, Months']",
+      "selectedDay": "string [note: 'sun, mon, tue, ....']",
+      "dayOfMonth": "number",
+      "endType": "string [note: 'never, on, after']",
+      "endsAt": "date",
+      "endsAfterOccurrences": "number",
+      "repeatedParentTask": "task"
+    }
+  }
+]

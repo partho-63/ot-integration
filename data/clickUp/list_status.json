@@ -1,0 +1,38 @@
+[
+  {
+    "ClickUpList": {
+      "id": "187068339",
+      "name": "PD_Tasks",
+      "orderindex": 0,
+      "status": null,
+      "priority": null,
+      "assignee": null,
+      "task_count": 7,
+      "due_date": null,
+      "start_date": null,
+      "folder": {
+        "id": "109046744",
+        "name": "PD_Task_Lists",
+        "hidden": false,
+        "access": true
+      },
+      "space": {
+        "id": "54988780",
+        "name": "ClickUp_Intgrtn",
+        "access": true
+      },
+      "archived": false,
+      "override_statuses": false,
+      "permission_level": "create"
+    }
+  },
+  {
+    "OneThreadTaskStatus": {
+      "_id": "varchar [pk]",
+      "name": "varchar",
+      "createdBy": "account",
+      "project": "project",
+      "index": "int"
+    }
+  }
+]

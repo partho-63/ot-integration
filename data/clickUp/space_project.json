@@ -1,0 +1,135 @@
+[
+  {
+    "ClickUpSpace": {
+      "id": "54988780",
+      "name": "ClickUp_Intgrtn",
+      "private": false,
+      "avatar": null,
+      "statuses": [
+        {
+          "id": "p54988780_xCmSKtA1",
+          "status": "r&d",
+          "type": "open",
+          "orderindex": 0,
+          "color": "#d3d3d3"
+        },
+        {
+          "id": "p54988780_UchAwLf6",
+          "status": "in progress",
+          "type": "custom",
+          "orderindex": 1,
+          "color": "#4367D2"
+        },
+        {
+          "id": "p54988780_OXbWQBIX",
+          "status": "bug",
+          "type": "custom",
+          "orderindex": 2,
+          "color": "#e50000"
+        },
+        {
+          "id": "p54988780_ubB9y24V",
+          "status": "complete",
+          "type": "closed",
+          "orderindex": 3,
+          "color": "#6bc950"
+        }
+      ],
+      "multiple_assignees": true,
+      "features": {
+        "due_dates": {
+          "enabled": true,
+          "start_date": true,
+          "remap_due_dates": false,
+          "remap_closed_due_date": false
+        },
+        "sprints": {
+          "enabled": false
+        },
+        "time_tracking": {
+          "enabled": true,
+          "harvest": false,
+          "rollup": false
+        },
+        "points": {
+          "enabled": false
+        },
+        "custom_items": {
+          "enabled": false
+        },
+        "priorities": {
+          "enabled": true,
+          "priorities": [
+            {
+              "id": "1",
+              "priority": "urgent",
+              "color": "#f50000",
+              "orderindex": "1"
+            },
+            {
+              "id": "2",
+              "priority": "high",
+              "color": "#ffcc00",
+              "orderindex": "2"
+            },
+            {
+              "id": "3",
+              "priority": "normal",
+              "color": "#6fddff",
+              "orderindex": "3"
+            },
+            {
+              "id": "4",
+              "priority": "low",
+              "color": "#d8d8d8",
+              "orderindex": "4"
+            }
+          ]
+        },
+        "tags": {
+          "enabled": true
+        },
+        "check_unresolved": {
+          "enabled": true,
+          "subtasks": null,
+          "checklists": null,
+          "comments": null
+        },
+        "zoom": {
+          "enabled": false
+        },
+        "milestones": {
+          "enabled": false
+        },
+        "custom_fields": {
+          "enabled": true
+        },
+        "dependency_warning": {
+          "enabled": true
+        },
+        "multiple_assignees": {
+          "enabled": true
+        }
+      },
+      "archived": false
+    }
+  },
+  {
+    "OneThreadProject": {
+      "_id": "varchar [pk]",
+      "name": "varchar [not null]",
+      "deadline": "date",
+      "color": "varchar",
+      "status": "varchar",
+      "concernedAdmin": "account",
+      "optionalRole": "varchar",
+      "createdBy": "account",
+      "department": "department",
+      "file": "file",
+      "room": "room",
+      "company": "company",
+      "associate": "associate",
+      "isArchived": "boolean"
+    }
+  }
+]

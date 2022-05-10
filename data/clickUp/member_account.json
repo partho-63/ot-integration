@@ -1,0 +1,42 @@
+[
+  {
+    "ClickUpMember": {
+      "id": 48289966,
+      "username": "Partho Das",
+      "email": "parthodas63@gmail.com",
+      "color": "#304ffe",
+      "initials": "PD",
+      "profilePicture": null,
+      "profileInfo": {
+        "display_profile": null,
+        "verified_ambassador": null,
+        "verified_consultant": null,
+        "top_tier_user": null,
+        "viewed_verified_ambassador": null,
+        "viewed_verified_consultant": null,
+        "viewed_top_tier_user": null
+      }
+    }
+  },
+  {
+    "OneThreadAccount": {
+      "_id": "varchar [pk]",
+      "name": "varchar [unique]",
+      "firstName": "varchar",
+      "lastName": "varchar",
+      "email": "varchar [not null, unique]",
+      "secondaryEmail": "varchar",
+      "contactNo": "varchar [not null]",
+      "gender": "varchar",
+      "bloodGroup": "varchar",
+      "location": "varchar",
+      "about": "varchar",
+      "birthDate": "date",
+      "profileImage": "varchar",
+      "salt": "varchar",
+      "password": "varchar",
+      "isVerified": "boolean",
+      "language": "varchar"
+    }
+  }
+]
