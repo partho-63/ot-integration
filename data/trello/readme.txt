@@ -3,7 +3,7 @@
 ==================================================
 
 --------------------------------------------------
-=== Authorize a User ===
+=== Authorize an User ===
 --------------------------------------------------
 
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
@@ -64,7 +64,7 @@
 
 
 --------------------------------------------------
-=== Import Trello Token of a User ===
+=== Import Trello Token of an User ===
 --------------------------------------------------
 Request:
     url: /trello/authorize
@@ -78,13 +78,13 @@ Request:
 
 Response:
     -> Checks if any user is logged in
-    -> Saves Trello Token, Member ID against a user
+    -> Saves Trello Token, Member ID against an user
     -> Returns to Trello Home Page
 
 
 
 --------------------------------------------------
-=== Import Trello Data of a User ===
+=== Import Trello Data of an User ===
 --------------------------------------------------
 Request:
     url: /trello/import
@@ -93,7 +93,7 @@ Request:
 Response:
     -> Checks if any user is logged in
     -> Checks if Trello token is saved against the user.
-    -> Imports Trello Data of a User and saves them.
+    -> Imports Trello Data of an User and saves them.
         -> Imports Workspaces for the Member
         -> Imports Boards for each Workspace
         -> Imports Lists for each Board
@@ -216,7 +216,7 @@ Response:
 
 
 --------------------------------------------------
-=== Get Boards of an Workspace ===
+=== Get Boards of a Workspace ===
 --------------------------------------------------
 Request:
     url: https://api.trello.com/1/organizations/${trelloWorkspaceId}/boards?key=${trelloApiKey}&token=${trelloToken}
@@ -322,7 +322,7 @@ Response:
 
 
 --------------------------------------------------
-=== Get Lists of an Board ===
+=== Get Lists of a Board ===
 --------------------------------------------------
 Request:
     url: https://api.trello.com/1/boards/${trelloBoardId}/lists?key=${trelloApiKey}&token=${trelloToken}
@@ -347,7 +347,7 @@ Response:
 
 
 --------------------------------------------------
-=== Get Tasks of an List ===
+=== Get Tasks of a List ===
 --------------------------------------------------
 Request:
     url: https://api.trello.com/1/boards/${trelloBoardId}/lists?key=${trelloApiKey}&token=${trelloToken}
